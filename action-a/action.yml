@@ -2,15 +2,15 @@ name: 'combine-pdfs'
 description: 'Combines PDFs'
 
 inputs:
-  INPUTFOLDER:  # id of input
-    description: 'Who to greet'
+  inputPath:  # id of input
+    description: 'The path that has all the .pdf files'
     required: true
     default: 'resources'
+  outputName:
+    description: 'The name of the output file'
+    required: true
+    default: 'output'
     
 runs:
   using: "docker"
   image: "Dockerfile"
-
-# branding:
-#   icon: "mic"
-#   color: "purple"
