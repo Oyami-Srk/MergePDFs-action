@@ -9,7 +9,7 @@ jobs:
       filename: example
     steps:
       - uses: actions/checkout@v2
-      - uses: ./action-a
+      - uses: elMuso/MergePDFs-action@1.1
         with:
           path: ${{env.path}}
           filename: ${{env.filename}}
