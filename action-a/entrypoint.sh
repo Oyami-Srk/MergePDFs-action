@@ -1,6 +1,5 @@
 #!/bin/sh -l
 
-cd "$inputPath"
-echo "$PATH"
-qpdf --empty --pages *.pdf -- $outputName.pdf
-echo "::set-output result=$inputPath/$outputName.pdf"
+cd "$INPUT_PATH"
+qpdf --empty --pages *.pdf -- $INPUT_FILENAME.pdf
+echo "::set-output result=$INPUT_PATH/$INPUT_FILENAME.pdf"
