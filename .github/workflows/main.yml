@@ -4,14 +4,17 @@ jobs:
   build:
     name: CombinePDFS
     runs-on: ubuntu-latest
+    env:
+      path: resources
+      filename: example
     steps:
       - uses: actions/checkout@v2
       - uses: ./action-a
         with:
-          path: resources
-          filename: example
+          path: ${{env.path}}
+          filename: ${{env.filename}}
       - name: Upload combined pdf
         uses: actions/upload-artifact@v2
         with:
-          name: example
-          path: example.pdf
+          name: ${{env.filename}}
+          path: ${{env.path}}.pdf
