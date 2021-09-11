@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
 cd "$INPUT_PATH"
-pdfunite * combined.pdf
+pdfunite *.pdf combined.pdf
 echo "::set-output result=$INPUT_PATH/combined.pdf"
