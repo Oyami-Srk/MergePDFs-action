@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./action-a
         with:
-          PATH: resources
+          INPUTFOLDER: resources
       - name: Upload combined pdf
         uses: actions/upload-artifact@v2
         with:
