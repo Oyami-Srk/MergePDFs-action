@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-cd "$INPUTFOLDER"
+cd "resources"
 pdfunite * combined.pdf
 echo "::set-output result=$INPUTFOLDER/combined.pdf"
