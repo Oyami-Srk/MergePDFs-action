@@ -8,8 +8,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./action-a
         with:
-          inputPath: resources
-          outputName: example
+          path: resources
+          filename: example
       - name: Upload combined pdf
         uses: actions/upload-artifact@v2
         with:
