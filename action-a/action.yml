@@ -2,11 +2,11 @@ name: 'combine-pdfs'
 description: 'Combines PDFs'
 
 inputs:
-  inputPath:  # id of input
+  path:  # id of input
     description: 'The path that has all the .pdf files'
     required: true
     default: 'resources'
-  outputName:
+  filename:
     description: 'The name of the output file'
     required: true
     default: 'output'
