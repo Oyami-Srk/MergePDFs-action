@@ -1,6 +1,12 @@
 name: 'combine-pdfs'
 description: 'Combines PDFs'
 
+inputs:
+  PATH:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'resources'
+    
 runs:
   using: "docker"
   image: "Dockerfile"
