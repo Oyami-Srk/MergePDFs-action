@@ -1,17 +1,14 @@
-name: "Hello Actions"
-description: "Greet someone"
-author: "octocat@github.com"
-
+name: 'combine-pdfs'
+description: 'Combines PDFs'
 inputs:
-  MY_NAME:
-    description: "Who to greet"
+  PATH:
+    description: "Path Of PDF to merge"
     required: true
-    default: "World"
 
 runs:
   using: "docker"
   image: "Dockerfile"
 
-branding:
-  icon: "mic"
-  color: "purple"
+# branding:
+#   icon: "mic"
+#   color: "purple"
