@@ -1,9 +1,5 @@
 name: 'combine-pdfs'
 description: 'Combines PDFs'
-inputs:
-  PATH:
-    description: "Path Of PDF to merge"
-    required: true
 
 runs:
   using: "docker"
