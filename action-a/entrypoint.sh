@@ -1,3 +1,5 @@
 #!/bin/sh -l
 
-sh -c "echo Hello world my name is $INPUT_MY_NAME"
+cd "$INPUT_PATH"
+pdfunite * combined.pdf
+echo "::set-output result=$INPUT_PATH/combined.pdf"
