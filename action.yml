@@ -1,4 +1,4 @@
-name: 'combine-pdfs'
+name: 'merge-pdfs'
 description: 'Combines PDFs'
 
 inputs:
