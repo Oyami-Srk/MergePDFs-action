@@ -3,5 +3,5 @@
 cd "resources"
 echo "$PATH"
 ls
-pdfunite *.{pdf} combined.pdf
+qpdf --empty --pages *.pdf -- out.pdf
 echo "::set-output result=$INPUTFOLDER/combined.pdf"
