@@ -2,14 +2,14 @@ name: 'merge-pdfs'
 description: 'Combines PDFs'
 
 inputs:
-  path:  # id of input
-    description: 'The path that has all the .pdf files'
+  files:
+    description: 'The list of the .pdf files'
     required: true
-    default: 'resources'
-  filename:
+    default: ''
+  output:
     description: 'The name of the output file'
     required: true
-    default: 'output'
+    default: 'combined.pdf'
     
 runs:
   using: "docker"

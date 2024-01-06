@@ -1,20 +1,26 @@
-on: [push]
+name: example
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
     name: CombinePDFS
     runs-on: ubuntu-latest
     env:
-      path: resources
-      filename: example
+      files: |
+        resources/b.pdf
+        resources/a.pdf
+        resources/c (1).pdf
+      output: example.pdf
     steps:
-      - uses: actions/checkout@v2
-      - uses: elMuso/MergePDFs-action@1.1
+      - uses: actions/checkout@v4
+      - uses: Oyami-Srk/MergePDFs-action@v1
         with:
-          path: ${{env.path}}
-          filename: ${{env.filename}}
+          files: ${{env.files}}
+          output: ${{env.output}}
       - name: Upload combined pdf
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: ${{env.filename}}
-          path: ${{env.path}}/${{env.filename}}.pdf
+          name: ${{env.output}}
+          path: ${{env.output}}

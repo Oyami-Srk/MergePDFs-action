@@ -1,5 +1,5 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
-cd "$INPUT_PATH"
-qpdf --empty --pages *.pdf -- $INPUT_FILENAME.pdf
-echo "::set-output result=$INPUT_PATH/$INPUT_FILENAME.pdf"
+echo "$INPUT_FILES" | head -c -1 | xargs -d '\n' bash -cx "qpdf --empty --pages \"\${@}\" -- \"$INPUT_OUTPUT\"" --
+
+echo "::set-output result=$INPUT_OUTPUT"

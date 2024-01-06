@@ -1,4 +1,4 @@
-FROM debian:9.5-slim
+FROM debian:stable-slim
 RUN apt-get update -y
 RUN apt-get install -y qpdf
 
